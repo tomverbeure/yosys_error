@@ -1,0 +1,149 @@
+%Warning-DECLFILENAME: CpuComplex.v:44: Filename 'CpuComplex' does not match MODULE name: StreamFifoLowLatency
+%Warning-DECLFILENAME: Use "/* verilator lint_off DECLFILENAME */" and lint_on around source to disable this message.
+%Warning-WIDTH: CpuComplex.v:4080: Operator ASSIGNW expects 30 bits on the Assign RHS, but Assign RHS's SHIFTR generates 32 bits.
+%Warning-UNUSED: CpuComplex.v:280: Signal is not used: dBus_rsp_error
+%Warning-UNUSED: CpuComplex.v:287: Signal is not used: IBusSimplePlugin_rspJoin_rspBuffer_c_io_push_ready
+%Warning-UNUSED: CpuComplex.v:291: Signal is not used: IBusSimplePlugin_rspJoin_rspBuffer_c_io_occupancy
+%Warning-UNUSED: CpuComplex.v:334: Bits of signal are not used: _zz_VexRiscv_199_[32]
+%Warning-UNUSED: CpuComplex.v:350: Bits of signal are not used: _zz_VexRiscv_215_[11:0]
+%Warning-UNUSED: CpuComplex.v:351: Bits of signal are not used: _zz_VexRiscv_216_[4:0]
+%Warning-UNUSED: CpuComplex.v:352: Bits of signal are not used: _zz_VexRiscv_217_[11:5]
+%Warning-UNUSED: CpuComplex.v:353: Bits of signal are not used: _zz_VexRiscv_218_[10:0]
+%Warning-UNUSED: CpuComplex.v:354: Bits of signal are not used: _zz_VexRiscv_219_[30:0]
+%Warning-UNUSED: CpuComplex.v:355: Bits of signal are not used: _zz_VexRiscv_220_[18:0]
+%Warning-UNUSED: CpuComplex.v:356: Bits of signal are not used: _zz_VexRiscv_221_[10:0]
+%Warning-UNUSED: CpuComplex.v:371: Bits of signal are not used: _zz_VexRiscv_236_[10:0]
+%Warning-UNUSED: CpuComplex.v:372: Bits of signal are not used: _zz_VexRiscv_237_[10:0]
+%Warning-UNUSED: CpuComplex.v:380: Bits of signal are not used: _zz_VexRiscv_245_[10:0]
+%Warning-UNUSED: CpuComplex.v:381: Bits of signal are not used: _zz_VexRiscv_246_[18:0]
+%Warning-UNUSED: CpuComplex.v:382: Bits of signal are not used: _zz_VexRiscv_247_[10:0]
+%Warning-UNUSED: CpuComplex.v:538: Signal is not used: writeBack_FORMAL_PC_NEXT
+%Warning-UNUSED: CpuComplex.v:646: Bits of signal are not used: _zz_VexRiscv_32_[31:12,6:0]
+%Warning-UNUSED: CpuComplex.v:649: Bits of signal are not used: decode_INSTRUCTION_ANTICIPATED[31:25,14:0]
+%Warning-UNUSED: CpuComplex.v:700: Signal is not used: decode_arbitration_isMoving
+%Warning-UNUSED: CpuComplex.v:711: Signal is not used: execute_arbitration_isMoving
+%Warning-UNUSED: CpuComplex.v:712: Signal is not used: execute_arbitration_isFiring
+%Warning-UNUSED: CpuComplex.v:722: Signal is not used: memory_arbitration_isMoving
+%Warning-UNUSED: CpuComplex.v:723: Signal is not used: memory_arbitration_isFiring
+%Warning-UNUSED: CpuComplex.v:733: Signal is not used: writeBack_arbitration_isMoving
+%Warning-UNUSED: CpuComplex.v:741: Signal is not used: IBusSimplePlugin_incomingInstruction
+%Warning-UNUSED: CpuComplex.v:745: Signal is not used: IBusSimplePlugin_decodePrediction_rsp_wasWrong
+%Warning-UNUSED: CpuComplex.v:747: Signal is not used: IBusSimplePlugin_pcValids_1
+%Warning-UNUSED: CpuComplex.v:748: Signal is not used: IBusSimplePlugin_pcValids_2
+%Warning-UNUSED: CpuComplex.v:749: Signal is not used: IBusSimplePlugin_pcValids_3
+%Warning-UNUSED: CpuComplex.v:754: Signal is not driven, nor used: CsrPlugin_exceptionPendings_0
+%Warning-UNUSED: CpuComplex.v:755: Signal is not driven, nor used: CsrPlugin_exceptionPendings_1
+%Warning-UNUSED: CpuComplex.v:756: Signal is not driven, nor used: CsrPlugin_exceptionPendings_2
+%Warning-UNUSED: CpuComplex.v:757: Signal is not driven, nor used: CsrPlugin_exceptionPendings_3
+%Warning-UNUSED: CpuComplex.v:758: Signal is not used: contextSwitching
+%Warning-UNUSED: CpuComplex.v:762: Signal is not used: CsrPlugin_allowException
+%Warning-UNUSED: CpuComplex.v:768: Bits of signal are not used: _zz_VexRiscv_51_[0]
+%Warning-UNUSED: CpuComplex.v:788: Signal is not used: IBusSimplePlugin_iBusRsp_stages_0_output_payload
+%Warning-UNUSED: CpuComplex.v:790: Signal is not used: IBusSimplePlugin_iBusRsp_stages_0_inputSample
+%Warning-UNUSED: CpuComplex.v:798: Signal is not driven, nor used: IBusSimplePlugin_iBusRsp_stages_1_inputSample
+%Warning-UNUSED: CpuComplex.v:806: Signal is not driven, nor used: IBusSimplePlugin_iBusRsp_stages_2_inputSample
+%Warning-UNUSED: CpuComplex.v:816: Signal is not used: IBusSimplePlugin_iBusRsp_readyForError
+%Warning-UNUSED: CpuComplex.v:820: Signal is not used: IBusSimplePlugin_iBusRsp_output_payload_rsp_error
+%Warning-UNUSED: CpuComplex.v:822: Signal is not used: IBusSimplePlugin_iBusRsp_output_payload_isRvc
+%Warning-UNDRIVEN: CpuComplex.v:826: Signal is not driven: IBusSimplePlugin_decompressor_output_payload_rsp_error
+%Warning-UNUSED: CpuComplex.v:842: Bits of signal are not used: _zz_VexRiscv_71_[0]
+%Warning-UNUSED: CpuComplex.v:849: Bits of signal are not used: _zz_VexRiscv_78_[0]
+%Warning-UNUSED: CpuComplex.v:852: Bits of signal are not used: _zz_VexRiscv_81_[0]
+%Warning-UNUSED: CpuComplex.v:861: Signal is not used: IBusSimplePlugin_decompressor_bufferFill
+%Warning-UNUSED: CpuComplex.v:864: Signal is not used: IBusSimplePlugin_injector_decodeInput_payload_pc
+%Warning-UNUSED: CpuComplex.v:865: Signal is not used: IBusSimplePlugin_injector_decodeInput_payload_rsp_error
+%Warning-UNUSED: CpuComplex.v:878: Signal is not used: IBusSimplePlugin_injector_formal_rawInDecode
+%Warning-UNDRIVEN: CpuComplex.v:901: Signal is not driven: IBusSimplePlugin_rspJoin_fetchRsp_isRvc
+%Warning-UNUSED: CpuComplex.v:915: Signal is not used: execute_DBusSimplePlugin_formalMask
+%Warning-UNUSED: CpuComplex.v:922: Signal is not used: CsrPlugin_misa_base
+%Warning-UNUSED: CpuComplex.v:923: Signal is not used: CsrPlugin_misa_extensions
+%Warning-UNUSED: CpuComplex.v:937: Signal is not used: CsrPlugin_mcause_interrupt
+%Warning-UNUSED: CpuComplex.v:938: Signal is not used: CsrPlugin_mcause_exceptionCode
+%Warning-UNUSED: CpuComplex.v:939: Signal is not driven, nor used: CsrPlugin_mtval
+%Warning-UNUSED: CpuComplex.v:949: Signal is not used: CsrPlugin_lastStageWasWfi
+%Warning-UNUSED: CpuComplex.v:955: Signal is not used: CsrPlugin_xtvec_mode
+%Warning-UNUSED: CpuComplex.v:957: Signal is not used: execute_CsrPlugin_wfiWake
+%Warning-UNUSED: CpuComplex.v:959: Signal is not used: execute_CsrPlugin_illegalAccess
+%Warning-UNUSED: CpuComplex.v:960: Signal is not used: execute_CsrPlugin_illegalInstruction
+%Warning-UNUSED: CpuComplex.v:965: Signal is not used: execute_CsrPlugin_readEnable
+%Warning-UNUSED: CpuComplex.v:969: Bits of signal are not used: _zz_VexRiscv_112_[7]
+%Warning-UNUSED: CpuComplex.v:1001: Bits of signal are not used: writeBack_MulPlugin_result[65:64,31:0]
+%Warning-UNUSED: CpuComplex.v:1038: Bits of signal are not used: execute_BranchPlugin_branchAdder[0]
+%Warning-UNUSED: CpuComplex.v:1098: Signal is not used: decode_ALU_CTRL_string
+%Warning-UNUSED: CpuComplex.v:1099: Signal is not used: _zz_VexRiscv_1__string
+%Warning-UNUSED: CpuComplex.v:1100: Signal is not used: _zz_VexRiscv_2__string
+%Warning-UNUSED: CpuComplex.v:1101: Signal is not used: _zz_VexRiscv_3__string
+%Warning-UNUSED: CpuComplex.v:1102: Signal is not used: decode_ALU_BITWISE_CTRL_string
+%Warning-UNUSED: CpuComplex.v:1103: Signal is not used: _zz_VexRiscv_4__string
+%Warning-UNUSED: CpuComplex.v:1104: Signal is not used: _zz_VexRiscv_5__string
+%Warning-UNUSED: CpuComplex.v:1105: Signal is not used: _zz_VexRiscv_6__string
+%Warning-UNUSED: CpuComplex.v:1106: Signal is not used: _zz_VexRiscv_7__string
+%Warning-UNUSED: CpuComplex.v:1107: Signal is not used: _zz_VexRiscv_8__string
+%Warning-UNUSED: CpuComplex.v:1108: Signal is not used: decode_SHIFT_CTRL_string
+%Warning-UNUSED: CpuComplex.v:1109: Signal is not used: _zz_VexRiscv_9__string
+%Warning-UNUSED: CpuComplex.v:1110: Signal is not used: _zz_VexRiscv_10__string
+%Warning-UNUSED: CpuComplex.v:1111: Signal is not used: _zz_VexRiscv_11__string
+%Warning-UNUSED: CpuComplex.v:1112: Signal is not used: _zz_VexRiscv_12__string
+%Warning-UNUSED: CpuComplex.v:1113: Signal is not used: _zz_VexRiscv_13__string
+%Warning-UNUSED: CpuComplex.v:1114: Signal is not used: _zz_VexRiscv_14__string
+%Warning-UNUSED: CpuComplex.v:1115: Signal is not used: _zz_VexRiscv_15__string
+%Warning-UNUSED: CpuComplex.v:1116: Signal is not used: _zz_VexRiscv_16__string
+%Warning-UNUSED: CpuComplex.v:1117: Signal is not used: _zz_VexRiscv_17__string
+%Warning-UNUSED: CpuComplex.v:1118: Signal is not used: decode_ENV_CTRL_string
+%Warning-UNUSED: CpuComplex.v:1119: Signal is not used: _zz_VexRiscv_18__string
+%Warning-UNUSED: CpuComplex.v:1120: Signal is not used: _zz_VexRiscv_19__string
+%Warning-UNUSED: CpuComplex.v:1121: Signal is not used: _zz_VexRiscv_20__string
+%Warning-UNUSED: CpuComplex.v:1122: Signal is not used: execute_BRANCH_CTRL_string
+%Warning-UNUSED: CpuComplex.v:1123: Signal is not used: _zz_VexRiscv_21__string
+%Warning-UNUSED: CpuComplex.v:1124: Signal is not used: memory_SHIFT_CTRL_string
+%Warning-UNUSED: CpuComplex.v:1125: Signal is not used: _zz_VexRiscv_23__string
+%Warning-UNUSED: CpuComplex.v:1126: Signal is not used: execute_SHIFT_CTRL_string
+%Warning-UNUSED: CpuComplex.v:1127: Signal is not used: _zz_VexRiscv_24__string
+%Warning-UNUSED: CpuComplex.v:1128: Signal is not used: decode_SRC2_CTRL_string
+%Warning-UNUSED: CpuComplex.v:1129: Signal is not used: _zz_VexRiscv_27__string
+%Warning-UNUSED: CpuComplex.v:1130: Signal is not used: decode_SRC1_CTRL_string
+%Warning-UNUSED: CpuComplex.v:1131: Signal is not used: _zz_VexRiscv_29__string
+%Warning-UNUSED: CpuComplex.v:1132: Signal is not used: execute_ALU_CTRL_string
+%Warning-UNUSED: CpuComplex.v:1133: Signal is not used: _zz_VexRiscv_30__string
+%Warning-UNUSED: CpuComplex.v:1134: Signal is not used: execute_ALU_BITWISE_CTRL_string
+%Warning-UNUSED: CpuComplex.v:1135: Signal is not used: _zz_VexRiscv_31__string
+%Warning-UNUSED: CpuComplex.v:1136: Signal is not used: _zz_VexRiscv_35__string
+%Warning-UNUSED: CpuComplex.v:1137: Signal is not used: _zz_VexRiscv_36__string
+%Warning-UNUSED: CpuComplex.v:1138: Signal is not used: _zz_VexRiscv_37__string
+%Warning-UNUSED: CpuComplex.v:1139: Signal is not used: _zz_VexRiscv_38__string
+%Warning-UNUSED: CpuComplex.v:1140: Signal is not used: _zz_VexRiscv_39__string
+%Warning-UNUSED: CpuComplex.v:1141: Signal is not used: _zz_VexRiscv_40__string
+%Warning-UNUSED: CpuComplex.v:1142: Signal is not used: _zz_VexRiscv_41__string
+%Warning-UNUSED: CpuComplex.v:1143: Signal is not used: memory_ENV_CTRL_string
+%Warning-UNUSED: CpuComplex.v:1144: Signal is not used: _zz_VexRiscv_43__string
+%Warning-UNUSED: CpuComplex.v:1145: Signal is not used: execute_ENV_CTRL_string
+%Warning-UNUSED: CpuComplex.v:1146: Signal is not used: _zz_VexRiscv_44__string
+%Warning-UNUSED: CpuComplex.v:1147: Signal is not used: writeBack_ENV_CTRL_string
+%Warning-UNUSED: CpuComplex.v:1148: Signal is not used: _zz_VexRiscv_45__string
+%Warning-UNUSED: CpuComplex.v:1149: Signal is not used: decode_BRANCH_CTRL_string
+%Warning-UNUSED: CpuComplex.v:1150: Signal is not used: _zz_VexRiscv_47__string
+%Warning-UNUSED: CpuComplex.v:1151: Signal is not used: _zz_VexRiscv_117__string
+%Warning-UNUSED: CpuComplex.v:1152: Signal is not used: _zz_VexRiscv_118__string
+%Warning-UNUSED: CpuComplex.v:1153: Signal is not used: _zz_VexRiscv_119__string
+%Warning-UNUSED: CpuComplex.v:1154: Signal is not used: _zz_VexRiscv_120__string
+%Warning-UNUSED: CpuComplex.v:1155: Signal is not used: _zz_VexRiscv_121__string
+%Warning-UNUSED: CpuComplex.v:1156: Signal is not used: _zz_VexRiscv_122__string
+%Warning-UNUSED: CpuComplex.v:1157: Signal is not used: _zz_VexRiscv_123__string
+%Warning-UNUSED: CpuComplex.v:1158: Signal is not used: decode_to_execute_ENV_CTRL_string
+%Warning-UNUSED: CpuComplex.v:1159: Signal is not used: execute_to_memory_ENV_CTRL_string
+%Warning-UNUSED: CpuComplex.v:1160: Signal is not used: memory_to_writeBack_ENV_CTRL_string
+%Warning-UNUSED: CpuComplex.v:1161: Signal is not used: decode_to_execute_BRANCH_CTRL_string
+%Warning-UNUSED: CpuComplex.v:1162: Signal is not used: decode_to_execute_SHIFT_CTRL_string
+%Warning-UNUSED: CpuComplex.v:1163: Signal is not used: execute_to_memory_SHIFT_CTRL_string
+%Warning-UNUSED: CpuComplex.v:1164: Signal is not used: decode_to_execute_ALU_BITWISE_CTRL_string
+%Warning-UNUSED: CpuComplex.v:1165: Signal is not used: decode_to_execute_ALU_CTRL_string
+%Warning-UNUSED: CpuComplex.v:4041: Bits of signal are not used: _zz_CCPipelinedMemoryBusRam_2_[29:11]
+%Warning-UNUSED: CpuComplex.v:4110: Signal is not used: io_apb_PSLVERROR
+%Warning-UNUSED: CpuComplex.v:4118: Bits of signal are not used: pipelinedMemoryBusStage_cmd_payload_address[31:20]
+%Warning-UNUSED: CpuComplex.v:4120: Signal is not used: pipelinedMemoryBusStage_cmd_payload_mask
+%Warning-UNUSED: CpuComplex.v:61: Signal is not used: pushPtr_willClear
+%Warning-UNUSED: CpuComplex.v:63: Signal is not used: pushPtr_willOverflow
+%Warning-UNUSED: CpuComplex.v:65: Signal is not used: popPtr_willClear
+%Warning-UNUSED: CpuComplex.v:67: Signal is not used: popPtr_willOverflow
+%Error: Exiting due to 146 warning(s)
+%Error: Command Failed /opt/verilator/bin/verilator_bin --lint-only -Wall CpuComplex.v

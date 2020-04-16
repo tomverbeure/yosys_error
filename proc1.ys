@@ -1,7 +1,5 @@
 
 read_verilog CpuComplex.v
-read_verilog -lib -D_ABC +/ice40/cells_sim.v
 hierarchy -check -top CpuComplex
-proc
-write_json CpuComplex.proc.json
+write_cxxrtl -O0 CpuComplex.c
 

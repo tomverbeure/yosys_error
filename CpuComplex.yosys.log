@@ -1,0 +1,419 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Wolf <claire@symbioticeda.com>          |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9+2406 (git sha1 8d3f6d0, gcc 5.4.0-6ubuntu1~16.04.12 -Og -fPIC)
+
+
+-- Executing script file `proc1.ys' --
+
+1. Executing Verilog-2005 frontend: CpuComplex.v
+Parsing Verilog input from `CpuComplex.v' to AST representation.
+Generating RTLIL representation for module `\StreamFifoLowLatency'.
+Generating RTLIL representation for module `\CCMasterArbiter'.
+Generating RTLIL representation for module `\VexRiscv'.
+CpuComplex.v:0: Warning: System task `$display' outside initial block is unsupported.
+CpuComplex.v:0: Warning: System task `$display' outside initial block is unsupported.
+Generating RTLIL representation for module `\CCPipelinedMemoryBusRam'.
+Generating RTLIL representation for module `\PipelinedMemoryBusToApbBridge'.
+Generating RTLIL representation for module `\CpuComplex'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \CpuComplex
+Used module:     \PipelinedMemoryBusToApbBridge
+Used module:     \CCPipelinedMemoryBusRam
+Used module:     \VexRiscv
+Used module:         \StreamFifoLowLatency
+Used module:     \CCMasterArbiter
+
+2.2. Analyzing design hierarchy..
+Top module:  \CpuComplex
+Used module:     \PipelinedMemoryBusToApbBridge
+Used module:     \CCPipelinedMemoryBusRam
+Used module:     \VexRiscv
+Used module:         \StreamFifoLowLatency
+Used module:     \CCMasterArbiter
+Removed 0 unused modules.
+
+3. Executing CXXRTL backend.
+
+4. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 433 redundant assignments.
+Promoted 393 assignments to connections.
+
+5. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 2 empty switches in `\VexRiscv.$proc$CpuComplex.v:3774$629'.
+Cleaned up 2 empty switches.
+
+6. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\VexRiscv.$proc$CpuComplex.v:941$707'.
+  Set init value: \CsrPlugin_minstret = 64'0000000000000000000000000000000000000000000000000000000000000000
+Found init rule in `\VexRiscv.$proc$CpuComplex.v:940$706'.
+  Set init value: \CsrPlugin_mcycle = 64'0000000000000000000000000000000000000000000000000000000000000000
+
+Module `\CpuComplex` contains feedback arcs through wires:
+  $logic_and$CpuComplex.v:4293$760_Y
+  $logic_or$CpuComplex.v:4423$777_Y
+  $0\mainBusDecoder_logic_masterPipelined_cmd_ready[0:0]
+  \mainBusArbiter_io_iBus_cmd_ready
+  \mainBusArbiter_io_iBus_rsp_valid
+  \mainBusArbiter_io_iBus_rsp_payload_error
+  \mainBusArbiter_io_iBus_rsp_payload_inst
+  \mainBusArbiter_io_dBus_cmd_ready
+  \mainBusArbiter_io_dBus_rsp_ready
+  \mainBusArbiter_io_dBus_rsp_error
+  \mainBusArbiter_io_dBus_rsp_data
+  \mainBusArbiter_io_masterBus_cmd_valid
+  \mainBusArbiter_io_masterBus_cmd_payload_write
+  \mainBusArbiter_io_masterBus_cmd_payload_address
+  \mainBusArbiter_io_masterBus_cmd_payload_data
+  \mainBusArbiter_io_masterBus_cmd_payload_mask
+  $0\_zz_CpuComplex_5_[0:0]
+  $0\_zz_CpuComplex_4_[0:0]
+  $1\_zz_CpuComplex_6_[31:0]
+  $0\mainBusDecoder_logic_rspNoHit[0:0]
+  $0\cpu_dBus_cmd_halfPipe_regs_ready[0:0]
+  $0\cpu_dBus_cmd_halfPipe_regs_valid[0:0]
+  $0\mainBusDecoder_logic_rspPending[0:0]
+  $0\mainBusDecoder_logic_rspSourceId[0:0]
+  $0\cpu_dBus_cmd_halfPipe_regs_payload_size[1:0]
+  $0\cpu_dBus_cmd_halfPipe_regs_payload_data[31:0]
+  $0\cpu_dBus_cmd_halfPipe_regs_payload_address[31:0]
+  $0\cpu_dBus_cmd_halfPipe_regs_payload_wr[0:0]
+Module `\PipelinedMemoryBusToApbBridge` contains feedback arcs through wires:
+  $0\pipelinedMemoryBusStage_rsp_valid[0:0]
+  \pipelinedMemoryBusStage_cmd_ready
+  $2\pipelinedMemoryBusStage_cmd_ready[0:0]
+  $1\pipelinedMemoryBusStage_cmd_ready[0:0]
+  $0\pipelinedMemoryBusStage_rsp_regNext_valid[0:0]
+  $0\io_pipelinedMemoryBus_cmd_halfPipe_regs_ready[0:0]
+  $0\io_pipelinedMemoryBus_cmd_halfPipe_regs_valid[0:0]
+  $0\state[0:0]
+  $0\io_pipelinedMemoryBus_cmd_halfPipe_regs_payload_mask[3:0]
+  $0\io_pipelinedMemoryBus_cmd_halfPipe_regs_payload_data[31:0]
+  $0\io_pipelinedMemoryBus_cmd_halfPipe_regs_payload_address[31:0]
+  $0\io_pipelinedMemoryBus_cmd_halfPipe_regs_payload_write[0:0]
+  $2\pipelinedMemoryBusStage_rsp_valid[0:0]
+Module `\CCPipelinedMemoryBusRam` contains feedback arcs through wires:
+  $0\_zz_CCPipelinedMemoryBusRam_9_[7:0]
+  $0\_zz_CCPipelinedMemoryBusRam_8_[7:0]
+  $0\_zz_CCPipelinedMemoryBusRam_7_[7:0]
+  $0\_zz_CCPipelinedMemoryBusRam_6_[7:0]
+  $0$memwr$\ram_symbol0$CpuComplex.v:4066$708_EN[7:0]$721
+  $0$memwr$\ram_symbol0$CpuComplex.v:4066$708_DATA[7:0]$720
+  $0$memwr$\ram_symbol0$CpuComplex.v:4066$708_ADDR[10:0]$719
+  $0$memwr$\ram_symbol1$CpuComplex.v:4069$709_EN[7:0]$724
+  $0$memwr$\ram_symbol1$CpuComplex.v:4069$709_DATA[7:0]$723
+  $0$memwr$\ram_symbol1$CpuComplex.v:4069$709_ADDR[10:0]$722
+  $0$memwr$\ram_symbol2$CpuComplex.v:4072$710_EN[7:0]$727
+  $0$memwr$\ram_symbol2$CpuComplex.v:4072$710_DATA[7:0]$726
+  $0$memwr$\ram_symbol2$CpuComplex.v:4072$710_ADDR[10:0]$725
+  $0$memwr$\ram_symbol3$CpuComplex.v:4075$711_EN[7:0]$730
+  $0$memwr$\ram_symbol3$CpuComplex.v:4075$711_DATA[7:0]$729
+  $0$memwr$\ram_symbol3$CpuComplex.v:4075$711_ADDR[10:0]$728
+  $0\_zz_CCPipelinedMemoryBusRam_1_[0:0]
+Module `\VexRiscv` contains feedback arcs through wires:
+  $ternary$CpuComplex.v:2497$326_Y
+  $logic_or$CpuComplex.v:3553$564_Y
+  $logic_or$CpuComplex.v:3557$574_Y
+  $ternary$CpuComplex.v:3071$470_Y
+  $0\execute_CsrPlugin_writeData[31:0]
+  $logic_or$CpuComplex.v:1174$46_Y
+  $logic_or$CpuComplex.v:2697$378_Y
+  $logic_or$CpuComplex.v:3549$553_Y
+  $0\CsrPlugin_privilege[1:0]
+  $0\writeBack_arbitration_flushNext[0:0]
+  $logic_or$CpuComplex.v:2483$323_Y
+  $ternary$CpuComplex.v:2683$359_Y
+  \decode_arbitration_isFlushed
+  $0\decode_arbitration_removeIt[0:0]
+  $0\_zz_VexRiscv_22_[31:0]
+  $0\_zz_VexRiscv_46_[31:0]
+  $0\execute_SrcPlugin_addSub[31:0]
+  $0\writeBack_DBusSimplePlugin_rspShifted[31:0]
+  $ne$CpuComplex.v:2366$286_Y
+  $0\IBusSimplePlugin_fetcherflushIt[0:0]
+  $logic_and$CpuComplex.v:1177$49_Y
+  $ne$CpuComplex.v:2418$294_Y
+  $logic_and$CpuComplex.v:2449$302_Y
+  \IBusSimplePlugin_iBusRsp_stages_0_input_ready
+  $logic_and$CpuComplex.v:3563$590_Y
+  \IBusSimplePlugin_rspJoin_join_payload_rsp_inst
+  $0\memory_arbitration_removeIt[0:0]
+  $ternary$CpuComplex.v:2191$243_Y
+  $and$CpuComplex.v:2420$296_Y
+  $logic_not$CpuComplex.v:2469$312_Y
+  $0\IBusSimplePlugin_fetchPc_pcRegPropagate[0:0]
+  \execute_arbitration_isFlushed
+  $0\execute_arbitration_removeIt[0:0]
+  $0\execute_DBusSimplePlugin_skipCmd[0:0]
+  $0\CsrPlugin_xtvec_base[29:0]
+  $logic_and$CpuComplex.v:3171$494_Y
+  $logic_and$CpuComplex.v:3172$495_Y
+  $0\execute_BranchPlugin_branch_src1[31:0]
+  $0\execute_IntAluPlugin_bitwise[31:0]
+  \execute_REGFILE_WRITE_DATA
+  $0\_zz_VexRiscv_42_[31:0]
+  $0\_zz_VexRiscv_48_[31:0]
+  $0\execute_BranchPlugin_branch_src2[31:0]
+  $0\decode_REGFILE_WRITE_VALID[0:0]
+  $0\_zz_VexRiscv_135_[0:0]
+  $0\_zz_VexRiscv_134_[0:0]
+  $0\_zz_VexRiscv_49_[31:0]
+  $0\_zz_VexRiscv_86_[2:0]
+  $0\_zz_VexRiscv_146_[0:0]
+  $0\IBusSimplePlugin_fetchPc_corrected[0:0]
+  $0\writeBack_arbitration_removeIt[0:0]
+  $0\lastStageRegFileWrite_valid[0:0]
+  $0\_zz_VexRiscv_131_[31:0]
+  $0\_zz_VexRiscv_126_[31:0]
+  $0\IBusSimplePlugin_fetchPc_pc[31:0]
+  $0\CsrPlugin_jumpInterface_payload[31:0]
+  $0\_zz_VexRiscv_87_[2:0]
+  $0\_zz_VexRiscv_147_[0:0]
+  $0\_zz_VexRiscv_34_[0:0]
+  $0\IBusSimplePlugin_decompressor_decompressed[31:0]
+  $1\execute_MulPlugin_bSigned[0:0]
+  $1\execute_MulPlugin_aSigned[0:0]
+  $1\_zz_VexRiscv_125_[31:0]
+  \execute_CsrPlugin_readData
+  $1\execute_CsrPlugin_readData[31:0]
+  $1\CsrPlugin_xtvec_mode[1:0]
+  $1\CsrPlugin_pipelineLiberator_done[0:0]
+  \writeBack_DBusSimplePlugin_rspFormated
+  $1\writeBack_DBusSimplePlugin_rspFormated[31:0]
+  $1\_zz_VexRiscv_104_[3:0]
+  $1\_zz_VexRiscv_103_[31:0]
+  $1\IBusSimplePlugin_rspJoin_fetchRsp_rsp_error[0:0]
+  $1\IBusSimplePlugin_iBusRsp_stages_1_halt[0:0]
+  $1\memory_arbitration_flushNext[0:0]
+  $1\memory_arbitration_haltItself[0:0]
+  \_zz_VexRiscv_156_
+  $1\_zz_VexRiscv_156_[31:0]
+  \decode_RS2
+  $11\decode_RS2[31:0]
+  $10\decode_RS2[31:0]
+  $9\decode_RS2[31:0]
+  $8\decode_RS2[31:0]
+  $7\decode_RS2[31:0]
+  $6\decode_RS2[31:0]
+  $5\decode_RS2[31:0]
+  $4\decode_RS2[31:0]
+  $3\decode_RS2[31:0]
+  $2\decode_RS2[31:0]
+  $1\decode_RS2[31:0]
+  \decode_RS1
+  $11\decode_RS1[31:0]
+  $10\decode_RS1[31:0]
+  $9\decode_RS1[31:0]
+  $8\decode_RS1[31:0]
+  $7\decode_RS1[31:0]
+  $6\decode_RS1[31:0]
+  $5\decode_RS1[31:0]
+  $4\decode_RS1[31:0]
+  $3\decode_RS1[31:0]
+  $2\decode_RS1[31:0]
+  $1\decode_RS1[31:0]
+  $3\decode_arbitration_haltByOther[0:0]
+  $2\decode_arbitration_haltByOther[0:0]
+  $1\decode_arbitration_haltByOther[0:0]
+  $3\execute_arbitration_haltItself[0:0]
+  $2\execute_arbitration_haltItself[0:0]
+  $1\execute_arbitration_haltItself[0:0]
+  $2\IBusSimplePlugin_fetcherHalt[0:0]
+  $1\IBusSimplePlugin_fetcherHalt[0:0]
+  $3\IBusSimplePlugin_incomingInstruction[0:0]
+  $2\IBusSimplePlugin_incomingInstruction[0:0]
+  $1\IBusSimplePlugin_incomingInstruction[0:0]
+  $2\CsrPlugin_jumpInterface_valid[0:0]
+  $1\CsrPlugin_jumpInterface_valid[0:0]
+  $2\IBusSimplePlugin_iBusRsp_readyForError[0:0]
+  $1\IBusSimplePlugin_iBusRsp_readyForError[0:0]
+  $2\IBusSimplePlugin_decompressor_bufferFill[0:0]
+  $1\IBusSimplePlugin_decompressor_bufferFill[0:0]
+  $5\execute_CsrPlugin_illegalAccess[0:0]
+  $4\execute_CsrPlugin_illegalAccess[0:0]
+  $3\execute_CsrPlugin_illegalAccess[0:0]
+  $2\execute_CsrPlugin_illegalAccess[0:0]
+  $1\execute_CsrPlugin_illegalAccess[0:0]
+  $2\execute_CsrPlugin_illegalInstruction[0:0]
+  $1\execute_CsrPlugin_illegalInstruction[0:0]
+  $0\CsrPlugin_mip_MSIP[0:0]
+  $0\decode_to_execute_BYPASSABLE_EXECUTE_STAGE[0:0]
+  $0\decode_to_execute_PREDICTION_HAD_BRANCHED2[0:0]
+  $0\memory_to_writeBack_FORMAL_PC_NEXT[31:0]
+  $0\execute_to_memory_FORMAL_PC_NEXT[31:0]
+  $0\decode_to_execute_FORMAL_PC_NEXT[31:0]
+  $0\decode_to_execute_ALU_CTRL[1:0]
+  $0\decode_to_execute_ALU_BITWISE_CTRL[1:0]
+  $0\execute_to_memory_MUL_LH[33:0]
+  $0\decode_to_execute_CSR_READ_OPCODE[0:0]
+  $0\execute_to_memory_BRANCH_DO[0:0]
+  $0\execute_to_memory_MUL_HL[33:0]
+  $0\decode_to_execute_RS1[31:0]
+  $0\execute_to_memory_BRANCH_CALC[31:0]
+  $0\decode_to_execute_SRC1[31:0]
+  $0\decode_to_execute_SRC_USE_SUB_LESS[0:0]
+  $0\memory_to_writeBack_REGFILE_WRITE_VALID[0:0]
+  $0\execute_to_memory_REGFILE_WRITE_VALID[0:0]
+  $0\decode_to_execute_REGFILE_WRITE_VALID[0:0]
+  $0\memory_to_writeBack_PC[31:0]
+  $0\execute_to_memory_PC[31:0]
+  $0\decode_to_execute_PC[31:0]
+  $0\memory_to_writeBack_MEMORY_ADDRESS_LOW[1:0]
+  $0\execute_to_memory_MEMORY_ADDRESS_LOW[1:0]
+  $0\decode_to_execute_RS2[31:0]
+  $0\execute_to_memory_SHIFT_CTRL[1:0]
+  $0\decode_to_execute_SHIFT_CTRL[1:0]
+  $0\memory_to_writeBack_MUL_HH[33:0]
+  $0\execute_to_memory_MUL_HH[33:0]
+  $0\decode_to_execute_BRANCH_CTRL[1:0]
+  $0\execute_to_memory_REGFILE_WRITE_DATA[31:0]
+  $0\memory_to_writeBack_ENV_CTRL[0:0]
+  $0\execute_to_memory_ENV_CTRL[0:0]
+  $0\decode_to_execute_ENV_CTRL[0:0]
+  $0\memory_to_writeBack_MUL_LOW[51:0]
+  $0\decode_to_execute_SRC2_FORCE_ZERO[0:0]
+  $0\execute_to_memory_BYPASSABLE_MEMORY_STAGE[0:0]
+  $0\decode_to_execute_BYPASSABLE_MEMORY_STAGE[0:0]
+  $0\memory_to_writeBack_MEMORY_READ_DATA[31:0]
+  $0\execute_to_memory_INSTRUCTION[31:0]
+  $0\decode_to_execute_INSTRUCTION[31:0]
+  $0\memory_to_writeBack_MEMORY_ENABLE[0:0]
+  $0\execute_to_memory_MEMORY_ENABLE[0:0]
+  $0\decode_to_execute_MEMORY_ENABLE[0:0]
+  $0\memory_to_writeBack_IS_MUL[0:0]
+  $0\execute_to_memory_IS_MUL[0:0]
+  $0\decode_to_execute_IS_MUL[0:0]
+  $0\decode_to_execute_IS_RVC[0:0]
+  $0\decode_to_execute_CSR_WRITE_OPCODE[0:0]
+  $0\execute_to_memory_MUL_LL[31:0]
+  $0\execute_to_memory_SHIFT_RIGHT[31:0]
+  $0\decode_to_execute_SRC_LESS_UNSIGNED[0:0]
+  $0\decode_to_execute_IS_CSR[0:0]
+  $0\memory_to_writeBack_MEMORY_STORE[0:0]
+  $0\execute_to_memory_MEMORY_STORE[0:0]
+  $0\decode_to_execute_MEMORY_STORE[0:0]
+  $0\decode_to_execute_SRC2[31:0]
+  $0\CsrPlugin_interrupt_targetPrivilege[1:0]
+  $0\CsrPlugin_interrupt_code[3:0]
+  $0\CsrPlugin_minstret[63:0]
+  $0\CsrPlugin_mcause_exceptionCode[3:0]
+  $0\CsrPlugin_mcause_interrupt[0:0]
+  $0\CsrPlugin_mscratch[31:0]
+  $0\CsrPlugin_mepc[31:0]
+  $0\IBusSimplePlugin_injector_formal_rawInDecode[31:0]
+  $0\_zz_VexRiscv_94_[0:0]
+  $0\_zz_VexRiscv_93_[31:0]
+  $0\_zz_VexRiscv_92_[0:0]
+  $0\_zz_VexRiscv_91_[31:0]
+  $0\IBusSimplePlugin_decompressor_bufferData[15:0]
+  $0\_zz_VexRiscv_62_[31:0]
+  $0$memwr$\RegFilePlugin_regFile$CpuComplex.v:1427$41_EN[31:0]$216
+  $0$memwr$\RegFilePlugin_regFile$CpuComplex.v:1427$41_DATA[31:0]$215
+  $0$memwr$\RegFilePlugin_regFile$CpuComplex.v:1427$41_ADDR[4:0]$214
+  $0\_zz_VexRiscv_136_[0:0]
+  $0\_zz_VexRiscv_124_[0:0]
+  $0\execute_CsrPlugin_wfiWake[0:0]
+  $0\CsrPlugin_hadException[0:0]
+  $0\CsrPlugin_interrupt_valid[0:0]
+  $0\IBusSimplePlugin_rspJoin_discardCounter[2:0]
+  $0\IBusSimplePlugin_pendingCmd[2:0]
+  $0\IBusSimplePlugin_fetchPc_booted[0:0]
+  $0\memory_to_writeBack_REGFILE_WRITE_DATA[31:0]
+  $0\memory_to_writeBack_INSTRUCTION[31:0]
+  $0\CsrPlugin_mie_MSIE[0:0]
+  $0\CsrPlugin_mie_MTIE[0:0]
+  $0\CsrPlugin_mie_MEIE[0:0]
+  $0\CsrPlugin_mstatus_MPP[1:0]
+  $0\CsrPlugin_mstatus_MPIE[0:0]
+  $0\CsrPlugin_mstatus_MIE[0:0]
+  $0\IBusSimplePlugin_injector_decodeRemoved[0:0]
+  $0\IBusSimplePlugin_injector_nextPcCalc_valids_3[0:0]
+  $0\IBusSimplePlugin_injector_nextPcCalc_valids_2[0:0]
+  $0\IBusSimplePlugin_injector_nextPcCalc_valids_1[0:0]
+  $0\IBusSimplePlugin_injector_nextPcCalc_valids_0[0:0]
+  $0\_zz_VexRiscv_90_[0:0]
+  $0\IBusSimplePlugin_decompressor_bufferValid[0:0]
+  $0\_zz_VexRiscv_61_[0:0]
+  $0\_zz_VexRiscv_59_[0:0]
+  $0\IBusSimplePlugin_decodePc_pcReg[31:0]
+  $0\IBusSimplePlugin_fetchPc_inc[0:0]
+  $0\IBusSimplePlugin_fetchPc_pcReg[31:0]
+  $0\writeBack_arbitration_isValid[0:0]
+  $0\memory_arbitration_isValid[0:0]
+  $0\execute_arbitration_isValid[0:0]
+  $0\_zz_VexRiscv_155_[31:0]
+  $0\_zz_VexRiscv_154_[31:0]
+  $3\CsrPlugin_jumpInterface_payload[31:0]
+  $1\CsrPlugin_jumpInterface_payload[31:0]
+  $1\IBusSimplePlugin_fetchPc_pc[1:1]
+  $3\_zz_VexRiscv_146_[0:0]
+  $2\_zz_VexRiscv_146_[0:0]
+  $9\_zz_VexRiscv_134_[0:0]
+  $8\_zz_VexRiscv_134_[0:0]
+  $7\_zz_VexRiscv_134_[0:0]
+  $6\_zz_VexRiscv_134_[0:0]
+  $5\_zz_VexRiscv_134_[0:0]
+  $4\_zz_VexRiscv_134_[0:0]
+  $3\_zz_VexRiscv_134_[0:0]
+  $2\_zz_VexRiscv_134_[0:0]
+  $1\_zz_VexRiscv_134_[0:0]
+  $9\_zz_VexRiscv_135_[0:0]
+  $8\_zz_VexRiscv_135_[0:0]
+  $7\_zz_VexRiscv_135_[0:0]
+  $6\_zz_VexRiscv_135_[0:0]
+  $5\_zz_VexRiscv_135_[0:0]
+  $4\_zz_VexRiscv_135_[0:0]
+  $3\_zz_VexRiscv_135_[0:0]
+  $2\_zz_VexRiscv_135_[0:0]
+  $1\_zz_VexRiscv_135_[0:0]
+  $2\execute_BranchPlugin_branch_src2[31:0]
+  \IBusSimplePlugin_rspJoin_rspBuffer_c_io_pop_valid
+  \IBusSimplePlugin_iBusRsp_output_payload_rsp_inst
+  $1\IBusSimplePlugin_fetcherflushIt[0:0]
+  \writeBack_DBusSimplePlugin_rspShifted
+  $3\_zz_VexRiscv_46_[31:0]
+  $1\_zz_VexRiscv_46_[31:0]
+  $2\_zz_VexRiscv_22_[31:0]
+  $1\writeBack_arbitration_flushNext[0:0]
+Module `\CCMasterArbiter` contains feedback arcs through wires:
+  $0\io_masterBus_cmd_valid[0:0]
+  $1\io_dBus_cmd_ready[0:0]
+  $1\io_iBus_cmd_ready[0:0]
+  $1\_zz_CCMasterArbiter_1_[3:0]
+  $0\rspTarget[0:0]
+  $0\rspPending[0:0]
+Module `\StreamFifoLowLatency` contains feedback arcs through wires:
+  $logic_and$CpuComplex.v:121$13_Y
+  $0\_zz_StreamFifoLowLatency_1_[0:0]
+  $1\io_pop_payload_inst[31:0]
+  $1\io_pop_payload_error[0:0]
+  $1\io_pop_valid[0:0]
+  $1\popPtr_willClear[0:0]
+  $1\popPtr_willIncrement[0:0]
+  $1\pushPtr_willClear[0:0]
+  $1\pushPtr_willIncrement[0:0]
+  $0\_zz_StreamFifoLowLatency_3_[32:0]
+  $0\risingOccupancy[0:0]
+Feedback arcs require delta cycles during evaluation.
